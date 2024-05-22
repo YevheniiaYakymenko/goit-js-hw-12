@@ -15,10 +15,22 @@ export function createGalleryItemMarkup(images) {
               <img class="gallery-img" src="${webformatURL}" alt="${tags}" />
             </a>
             <div class="small-info">
-             <small class="text-body-likes">Likes: ${likes}</small>
-             <small class="text-body-views">Views: ${views}</small>
-             <small class="text-body-comments">Comments: ${comments}</small>
-             <small class="text-body-downloads">Downloads: ${downloads}</small>
+               <div class="small-info-item">
+                 <Likes: class="info-title">Likes:</span>
+                 <span class="info">${likes}</span>
+               </div>
+               <div class="small-info-item">
+                 <span class="info-title">Views:</span>
+                 <span class="info"> ${views}</span>
+               </div>
+               <div class="small-info-item">
+                 <span class="info-title">Comments:</span>
+                 <span class="info">${comments}</span>
+               </div>
+               <div class="small-info-item">
+                 <span class="info-title">Downloads:</span>
+                 <span class="info">${downloads}</span>    
+               </div>
             </div>
           </li>`;
       }
