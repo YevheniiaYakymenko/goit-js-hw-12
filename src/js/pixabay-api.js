@@ -5,20 +5,16 @@ export const PER_PAGE = 15;
 axios.defaults.baseURL = BASE_URL;
 
 export const fetchPhotosByQuery = async (query, page = 1) => {
-  try {
-    const { data } = await axios.get('', {
-      params: {
-        key: API_KEY,
-        q: query,
-        image_type: 'photo',
-        orientation: 'horizontal',
-        safesearch: true,
-        per_page: PER_PAGE,
-        page,
-      },
-    });
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
+  const { data } = await axios.get('', {
+    params: {
+      key: API_KEY,
+      q: query,
+      image_type: 'photo',
+      orientation: 'horizontal',
+      safesearch: true,
+      per_page: PER_PAGE,
+      page,
+    },
+  });
+  return data;
 };
